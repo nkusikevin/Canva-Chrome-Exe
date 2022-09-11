@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 body {
-    height: 400px;
-    width: 400px;
+    width: 570px;
+    height: 100%;
+}
+
+.layout{
+    display: grid;
+    grid-template-columns: 58px 1fr;
 }
