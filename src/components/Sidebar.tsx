@@ -1,35 +1,36 @@
-import React from 'react'
+import React from "react";
 import {
 	AiOutlineHome,
 	AiOutlineQuestionCircle,
 	AiOutlineCrown,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
-  return (
+	return (
 		<aside className='w-64' aria-label='Sidebar'>
 			<div className='overflow-y-auto py-4 px-3 bg-gray-50 rounded bg-white'>
 				<ul className='space-y-2'>
 					<li>
-						<a
-							href='#'
+						<Link
+							to='/dashboard'
 							className='flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'>
 							<AiOutlineHome />
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href='#'
+						<Link
+							to='/faq'
 							className='flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'>
 							<AiOutlineQuestionCircle />
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href='#'
+						<Link
+							to='/subscription'
 							className='flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'>
 							<AiOutlineCrown />
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</div>
@@ -37,4 +38,4 @@ function Sidebar() {
 	);
 }
 
-export default Sidebar
+export default Sidebar;
