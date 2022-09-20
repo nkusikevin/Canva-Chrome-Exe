@@ -1,12 +1,10 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../firebase";
 
-const  user = auth.currentUser;
+const user = auth.currentUser;
 chrome.storage.local.set({ user: user }, function () {
 	console.log("Value is set to " + user);
 });
-
-
 
 function initApp() {
 	// Listen for auth state changes.

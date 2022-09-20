@@ -12,15 +12,17 @@
 
 - Run **npm install** to install dependencies
 
-### Installing
-
-- How/where to download your program
-- Any modifications needed to be made to files/folders
-
 ### Executing program
 
 - How to run the program
-- Run **npm run dev** to install dependencies
+- Run **npm run build** to generate build dist folder
+
+### Installing
+
+- Copy dist folder in project directory
+- open Chrome Extensions in chrome browser settings
+- first Pack Extension to generate unique key
+- Load Extension to add it to chrome browser extensions
 
 ## Authors
 

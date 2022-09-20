@@ -15,8 +15,6 @@ setPersistence(auth, browserLocalPersistence);
 
 // get the user from local storage
 
-
-
 const container = document.createElement("div");
 container.setAttribute("id", "root");
 document.body.appendChild(container);
