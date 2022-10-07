@@ -22,6 +22,10 @@ export const signUp = async (username, email, password) => {
 			username: username,
 			email: user.email,
 		});
+		//store the user in chrome storage
+		chrome.storage.sync.set({ loggedIn: true }, () => {
+			console.log("user logged in");
+		});
 		return user;
 	} catch (error) {
 		return error.message;
@@ -36,6 +40,10 @@ export const signIn = async (email, password) => {
 			password
 		);
 		const user = userCredential.user;
+		//store the user in chrome storage
+		chrome.storage.sync.set({ loggedIn: true }, () => {
+			console.log("user logged in");
+		});
 		return user;
 	} catch (error) {
 		const errorr = error.message;
@@ -46,6 +54,10 @@ export const signIn = async (email, password) => {
 export const signout = async () => {
 	try {
 		await signOut(auth);
+		//remove the user from chrome storage
+		chrome.storage.sync.set({ loggedIn: false }, () => {
+			console.log("user logged in");
+		});
 		return true;
 	} catch (error) {
 		return false;

@@ -8,6 +8,7 @@ import Faq from "./components/Faq";
 import Subscription from "./components/Subscription";
 import { AuthProvider } from "./AuthProvider";
 import { Routes, Route } from "react-router-dom";
+import $ from "jquery";
 
 function App() {
 	return (

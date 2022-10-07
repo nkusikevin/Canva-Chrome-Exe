@@ -15,7 +15,8 @@
 	},
 	"options_page": "options.html",
 	"background": {
-		"service_worker": "background.js"
+		"service_worker": "background.js",
+		"type": "module"
 	},
 	"oauth2": {
 		"client_id": "488774138667-o02nvov35v5e599qbb8q2ahv545dcmjf.apps.googleusercontent.com",
@@ -23,9 +24,13 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
-			"js": ["contentScript.js"]
+			"matches": [
+				"https://*.canva.com/design/*",
+				"https://*.canva.com/",
+				"https://www.google.com/"
+			],
+			"js": ["js/jquery.min.js", "contentScript.js"]
 		}
 	],
-	"permissions": ["identity","storage"]
+	"permissions": ["identity", "storage", "tabs", "activeTab"]
 }

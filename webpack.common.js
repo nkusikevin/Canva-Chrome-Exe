@@ -5,7 +5,6 @@ const HtmlPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const tailwindcss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
-const Dotenv = require("dotenv-webpack");
 const dotenv = require("dotenv").config({ path: __dirname + "/.env" });
 
 module.exports = {
@@ -53,7 +52,7 @@ module.exports = {
 		new CleanWebpackPlugin({
 			cleanStaleWebpackAssets: false,
 		}),
-		new Dotenv(),
+
 		new webpack.DefinePlugin({
 			"process.env": JSON.stringify(dotenv.parsed),
 		}),

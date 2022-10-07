@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"watch": "webpack --watch --progress --config webpack.dev.js",
-		"build": "webpack --watch --progress --config webpack.prod.js"
+		"build": "set \"INLINE_RUNTIME_CHUNK=false\" &&  webpack --watch --progress --config webpack.prod.js"
 	},
 	"keywords": [
 		"canva"
@@ -13,7 +13,8 @@
 	"author": "Nkusi kevin",
 	"license": "ISC",
 	"devDependencies": {
-		"@types/chrome": "^0.0.188",
+		"@types/chrome": "0.0.188",
+		"@types/jquery": "^3.5.14",
 		"@types/node": "^18.7.18",
 		"@types/react": "^18.0.9",
 		"@types/react-dom": "^18.0.4",
@@ -43,6 +44,7 @@
 		"babel-loader": "^8.2.5",
 		"dotenv": "^16.0.2",
 		"firebase": "^9.9.4",
+		"jquery": "^3.6.1",
 		"postcss": "^8.4.14",
 		"react-google-login": "^5.2.2",
 		"react-icons": "^4.3.1",
